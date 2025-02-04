@@ -80,7 +80,7 @@ class YoutubeTranscriptServer {
             tools: [
                 {
                     name: 'get_youtube_transcript',
-                    description: 'Get the transcript of a youtube video',
+                    description: 'Geting the transcript of a youtube video',
                     inputSchema: {
                         type: 'object',
                         properties: {
