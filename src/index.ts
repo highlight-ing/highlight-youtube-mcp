@@ -122,7 +122,5 @@ class YoutubeTranscriptServer {
     }
 }
 
-console.log(await getTranscript('https://youtube.com/watch?v=tqGvdDJQXvs'))
-
-// const server = new YoutubeTranscriptServer()
-// server.run().catch(console.error)
+const server = new YoutubeTranscriptServer()
+server.run().catch(console.error)
