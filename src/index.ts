@@ -80,13 +80,13 @@ class YoutubeTranscriptServer {
             tools: [
                 {
                     name: 'get_youtube_transcript',
-                    description: 'Get the full transcript of a youtube video',
+                    description: 'Extracts and returns the complete text transcript from a YouTube video URL. This tool processes the video\'s closed captions or subtitles and combines them into a single continuous text. The transcript includes all spoken content and on-screen text from the video.',
                     inputSchema: {
                         type: 'object',
                         properties: {
                             videoUrl: {
                                 type: 'string',
-                                description: 'The url of the youtube video',
+                                description: 'The full URL of the YouTube video (supports both youtube.com and youtu.be formats). Example: https://www.youtube.com/watch?v=<video_id>',
                             },
                         },
                         required: ['videoUrl'],
@@ -122,5 +122,7 @@ class YoutubeTranscriptServer {
     }
 }
 
-const server = new YoutubeTranscriptServer()
-server.run().catch(console.error)
+console.log(await getTranscript('https://youtube.com/watch?v=tqGvdDJQXvs'))
+
+// const server = new YoutubeTranscriptServer()
+// server.run().catch(console.error)
